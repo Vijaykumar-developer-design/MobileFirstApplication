@@ -20,7 +20,9 @@ app.use(bodyParser.json());
 app.use(helmet());
 // it means if server running in anyport it can take resources from ui hosting port
 // but we need to give frontend(react) running host address here
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({ origin: "https://mobilefrontend-silk.vercel.app", credentials: true })
+);
 // database connection address
 const uri = process.env.DATABSE_ADDRESS;
 
@@ -42,7 +44,7 @@ app.post("/api/signin", signInHandler);
 app.put("/api/forgot", forgotPasswordHandler);
 app.get("/api/characters", verifyAuthorization, charactersHandler);
 app.get("/api/character/:id", verifyAuthorization, characterDetailshandler);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
