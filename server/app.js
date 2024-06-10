@@ -41,7 +41,7 @@ mongoose
 
 app.post("/api/signup", signUpHandler);
 app.post("/api/signin", signInHandler);
-app.put("/api/forgot", forgotPasswordHandler);
+app.post("/api/forgot", forgotPasswordHandler);
 app.get("/api/characters", verifyAuthorization, charactersHandler);
 app.get("/api/character/:id", verifyAuthorization, characterDetailshandler);
 const PORT = process.env.PORT || 5000;
