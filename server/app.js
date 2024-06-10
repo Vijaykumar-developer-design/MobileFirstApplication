@@ -39,18 +39,19 @@ mongoose
   .catch((error) => {
     console.error("MongoDB connection error:", error);
   });
-app.get("/api/log", (req, res) => {
-  const initialData = {
-    timestamp: new Date().toISOString(),
-    message: "Initial data logged successfully",
-  };
+// sample api for cheching data
+// app.get("/api/log", (req, res) => {
+//   const initialData = {
+//     timestamp: new Date().toISOString(),
+//     message: "Initial data logged successfully",
+//   };
 
-  // Log initial data to the console
-  console.log(initialData);
+//   // Log initial data to the console
+//   console.log(initialData);
 
-  // Send response to client
-  res.status(200).json(initialData);
-});
+//   // Send response to client
+//   res.status(200).json(initialData);
+// });
 app.post("/api/signup", signUpHandler);
 app.post("/api/signin", signInHandler);
 app.post("/api/forgot", forgotPasswordHandler);
