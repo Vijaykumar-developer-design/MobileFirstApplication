@@ -1,3 +1,9 @@
+## frontend
+iniitially you have to signup to check functionality by providing any 10 digits mobile number and password
+later you can signin with your mobile number and password
+if you forgot password you can reset and login again but if you provide recent previous password it will ask new one
+got to dashboard and enjoy the application
+you can logout form the dashboard and once logout you cant go back you need to signin again
 # Mobile Server Backend
 
 This is the backend server for the mobile application. It is built using Node.js, Express, and MongoDB. The server handles user authentication, character data management, and other related functionalities.
