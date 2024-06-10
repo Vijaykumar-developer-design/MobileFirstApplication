@@ -1,0 +1,128 @@
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main-container {
+  font-family: Arial, sans-serif;
+}
+.user-table {
+  border-collapse: collapse;
+  border: 1px solid gray;
+  width: 95%;
+}
+.character-body {
+  /* background-color: red; */
+  height: 50px;
+  width: 25%;
+}
+.username {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.user-table th {
+  border: 1px solid green;
+  width: 10%;
+  height: 40px;
+  background-color: lightgray;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+.character-body tr td {
+  border: 1px solid black;
+  width: 10%;
+  height: 40px;
+  text-align: center;
+}
+.character-table,
+.vehicle-table,
+.starship-table,
+.film-table {
+  border-collapse: collapse;
+  width: 95%;
+}
+
+.character-table th,
+.character-table td,
+.vehicle-table th,
+.vehicle-table td,
+.starship-table th,
+.starship-table td,
+.film-table th,
+.film-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.character-table th,
+.vehicle-table th,
+.starship-table th,
+.film-table th {
+  background-color: #f2f2f2;
+}
+
+.character-table td,
+.vehicle-table td,
+.starship-table td,
+.film-table td {
+  height: 20px;
+}
+
+.character-table .table-header,
+.vehicle-table .table-header,
+.starship-table .table-header,
+.film-table .table-header {
+  font-weight: bold;
+}
+.category {
+  font-family: "Roboto";
+}
+.vehicle-table td,
+.starship-table td,
+.film-table td {
+  font-family: "Times New Roman", Times, serif;
+}
+.loading-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 30px;
+  font-family: "Roboto";
+}
+@media screen and (max-width: 480px) {
+  .vehicle-table {
+    /* border: 2px solid green; */
+  }
+  .vehicle-table th {
+    font-size: 10px;
+    /* color: red; */
+    width: 50px;
+  }
+  .vehicle-table td {
+    font-size: 10px;
+  }
+
+  .starship-table th {
+    font-size: 8px;
+    font-weight: bold;
+  }
+  .starship-table td {
+    font-size: 10px;
+  }
+  .film-table th {
+    font-size: 10px;
+  }
+  .film-table td {
+    font-size: 10px;
+  }
+  .user-table td {
+    font-size: 15px;
+  }
+  .user-table th {
+    font-size: 15px;
+  }
+}
