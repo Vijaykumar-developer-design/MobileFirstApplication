@@ -22,7 +22,10 @@ app.use(helmet());
 // but we need to give frontend(react) running host address here
 app.use(
   // cors({ origin: "http://localhost:3000", credentials: true })
-  cors({ origin: "https://mobilefrontend-silk.vercel.app", credentials: true })
+  cors({
+    origin: "https://mobile-first-frontend.vercel.app",
+    credentials: true,
+  })
 );
 // database connection address
 const uri = process.env.DATABSE_ADDRESS;
