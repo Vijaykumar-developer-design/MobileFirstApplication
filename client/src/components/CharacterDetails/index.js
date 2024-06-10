@@ -43,6 +43,7 @@ const CharacterDetails = () => {
 
   useEffect(() => {
     if (!effectRan.current) {
+      fetchData();
       effectRan.current = true;
     } else {
       fetchData();
