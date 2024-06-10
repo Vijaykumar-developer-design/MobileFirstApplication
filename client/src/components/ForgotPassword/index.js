@@ -130,7 +130,7 @@ const ForgotPassword = () => {
             <span>Show Password</span>
           </div>
         )}
-        {error && <p className="forgot-error">{error}</p>}
+
         <button className="sign-button-forgot" type="submit">
           Reset Password
         </button>
@@ -140,6 +140,7 @@ const ForgotPassword = () => {
             Sign In
           </span>
         </p>
+        {error && <p className="forgot-error">{error}</p>}
       </form>
     </div>
   );
