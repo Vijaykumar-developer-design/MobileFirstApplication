@@ -43,6 +43,7 @@ const CharacterList = () => {
   useEffect(() => {
     if (!effectRan.current) {
       setApiStatus(apiState.inProgress);
+      fetchData();
       effectRan.current = true;
     } else {
       fetchData(); // Fetch data on page change
