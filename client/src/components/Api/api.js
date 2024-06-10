@@ -1,1 +1,1 @@
-export const ApiUrl = "https://mobileserver.vercel.app/api";
+export const ApiUrl = "http://localhost:5000/api";

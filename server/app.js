@@ -21,6 +21,7 @@ app.use(helmet());
 // it means if server running in anyport it can take resources from ui hosting port
 // but we need to give frontend(react) running host address here
 app.use(
+  // cors({ origin: "http://localhost:3000", credentials: true })
   cors({ origin: "https://mobilefrontend-silk.vercel.app", credentials: true })
 );
 // database connection address
@@ -38,7 +39,18 @@ mongoose
   .catch((error) => {
     console.error("MongoDB connection error:", error);
   });
+app.get("/api/log", (req, res) => {
+  const initialData = {
+    timestamp: new Date().toISOString(),
+    message: "Initial data logged successfully",
+  };
 
+  // Log initial data to the console
+  console.log(initialData);
+
+  // Send response to client
+  res.status(200).json(initialData);
+});
 app.post("/api/signup", signUpHandler);
 app.post("/api/signin", signInHandler);
 app.post("/api/forgot", forgotPasswordHandler);
